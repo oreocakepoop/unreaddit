@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-base-100 text-base-content min-h-screen;
+  }
+
+  /* Reset text sizes to default */
+  h1 {
+    @apply text-lg;
+  }
+  h2 {
+    @apply text-[15px] font-medium;
+  }
+  p {
+    @apply text-[13.5px] leading-[1.4];
+  }
+}
+
+@layer components {
+  .tweet-action {
+    @apply hover:bg-base-200 p-2 rounded-full transition-colors duration-200;
+  }
+
+  /* Post Card Styles */
+  .post-container {
+    @apply card bg-base-100 shadow-xl mb-6 max-w-3xl mx-auto w-full;
+  }
+
+  .post-content {
+    @apply text-[13.5px] text-base-content/90 leading-[1.4] whitespace-pre-line mb-2;
+  }
+
+  .post-metadata {
+    @apply flex items-center text-xs text-base-content/60 mb-2 space-x-1.5;
+  }
+
+  .post-title {
+    @apply text-[15px] font-medium mb-1.5;
+  }
+
+  .post-actions {
+    @apply flex items-center gap-6 mt-4 border-t border-base-200 pt-4;
+  }
+}
